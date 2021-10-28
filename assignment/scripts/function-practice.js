@@ -5,20 +5,27 @@ console.log('***** Function Practice *****')
 // to test it and display the result
 
 // 1. Function to retdurn 'Hello World!'
-function hello() {
-  return 'Hello World!';
+function sayHello() {
+  console.log('hello and name. ', helloName());
 }
-// Call the function to test
-console.log('Test - should say "Hello World!"', hello());
-
-
-// 2. Function to return an personalized hello, using the `name` argument.
-//    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName(name) {
   return 'Hello' + "," + ' '+ 'Asante!';
 }
 // Remember to call the function to test
-console.log('testing saying hello and name. ', helloName());
+console.log('hello and name. ', helloName());
+
+
+
+
+// 2. Function to return an personalized hello, using the `name` argument.
+//    for example 'Hello, Jo!', or 'Hello, Stacy!'
+function helloName() {
+  return "Tom Brady wants to say hi Asante!' ";
+}
+
+console.log('He heard you have his 600th TD football;', helloName());
+
+
 
 
 // 3. Function to add two numbers together & return the result
@@ -34,18 +41,21 @@ return numOne * numTwo * numThree;
 }
 console.log('These are the numbers multiplied', multiplyThree(3, 3, 3));
 
+
 // 5. Function that will return true if a number is positive,
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
+  console.log("The number is:", number )
   if ( number > 0 ){
-    return true ;
+    return true;
   }
-  if ( number <= 0 ){
+  else {
     return false;
-  }
 }
-// Call the function to test each outcome (true & false)
+}
+console.log("Is this positive?", isPositive(-39));
 
+// Call the function to test each outcome (true & false)
 // Write a separate console.log statement for each outcome
 console.log( 'isPositive - should say true', isPositive(3) );
 console.log( 'isPositive - should say false', isPositive(0) );
@@ -54,6 +64,8 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
+
+let numArry = [1, 2, 3]
 function getLast( array ){
   if (array.length == 0)
   {
@@ -64,7 +76,8 @@ function getLast( array ){
   }
 
 }
-console.log('Test the last item in the array', getLast(['cat','dog']));
+console.log('Test the last item in the array', getLast([numArry]))
+
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
@@ -76,14 +89,15 @@ function find( value, array ){
   return false;
 }
 let array = ['trees', 'Leaves', 'wood', 'Roots']
-console.log('Here to test the true value of the function array', find('wood', array));// Here there is a loop that test to see if the function is true
-console.log('Seeing if I can get a false test of the function in a Array', find('moneyball', array));// Here there is a loop that test to see if the function is false
+console.log('Here to test the true value of the function array', find('wood', array)); // Here there is a loop that test to see if the function is true
+console.log('Seeing if I can get a false test of the function in a Array', find('moneyball', array)); // Here there is a loop that test to see if the function is false
 
 // ----------------------
 // Stretch Goals
 // ----------------------
 // 8. Function to check if a letter is the first letter in a
 //    string. Return true if it is, and false otherwise
+
 function isFirstLetter(letter, string) {
   if ( letter === string[0]){
     return true;
@@ -91,15 +105,23 @@ function isFirstLetter(letter, string) {
     return false;
 }
 
-console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'kiwis') );
-console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'kiwis') );
+console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'Cherrys') );
+console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'Lemons') );
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll( ) {
-  let sum = 0
-  // TODO: loop to add items
-  return sum;
-}
+function sum(arr) {
+        let sum = 0; // initialize sum
+
+        // Iterate through all elements
+        // and add them to sum
+        for (let i = 0; i < arr.length; i++)
+            sum += arr[i];
+
+        return sum;
+    }
+//Driver code--------------------------------------------------------
+let arr = [12, 3, 4, 15];
+    document.write("Sum of given array is " + sum(arr));
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
@@ -111,6 +133,7 @@ function returnPositiveNumbers( array ) {
   for ( let i in array ) {
     if ( array[i] > 0 ) {
       positiveArray.push(array[i]);
+
     }
   }
   if (positiveArray.length > 0 ) {
@@ -118,14 +141,8 @@ function returnPositiveNumbers( array ) {
   } else {
     return;
 
-
+}
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test
-
-Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
-
-For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
-
-Note: The function accepts an integer and returns an integer
