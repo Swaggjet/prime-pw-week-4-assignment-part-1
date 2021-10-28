@@ -139,9 +139,11 @@ function returnPositiveNumbers( array ) {
   if (positiveArray.length > 0 ) {
     return positiveArray;
   } else {
-    return;
+    return false
+  }
 
 }
+console.log(returnPositiveNumbers( newArray ));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
