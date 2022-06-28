@@ -52,3 +52,27 @@ function isPositive( number ) {
 }
 }
 console.log("Is this positive?", isPositive(-39));
+
+
+// Call the function to test each outcome (true & false)
+// Write a separate console.log statement for each outcome
+console.log( 'isPositive - true', isPositive(3) );
+console.log( 'isPositive - false', isPositive(0) );
+console.log( 'isPositive - false', isPositive(-3) );
+
+
+// 6. Function to return the _last_ item in an array. If the
+//    array is empty, return `undefined`.
+
+let numArry = [1, 2, 3]
+function getLast( array ){
+  if (array.length === 0)
+  {
+    return undefined;
+  }
+  else {
+      return array[array.length - 1];
+  }
+
+}
+console.log('Test the last item in the array', getLast([numArry]))
