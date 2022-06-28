@@ -24,3 +24,31 @@ function helloName() {
 }
 
 console.log('NASA says the sky is falling;', helloName());
+
+
+// 3. Function to add two numbers together & return the result
+function addNumbers( firstNumber, secondNumber ) {
+  return firstNumber + secondNumber;
+  // return firstNumber + secondNumber;
+}
+console.log('The amount is', addNumbers(9, 2));
+
+// 4. Function to multiply three numbers & return the result
+function multiplyThree( numOne, numTwo, numThree ){
+return numOne * numTwo * numThree;
+}
+console.log('These are multiplied', multiplyThree(3, 3, 3));
+
+
+// 5. Function that will return true if a number is positive,
+//    or greater than zero, and false otherwise
+function isPositive( number ) {
+  console.log("The number is:", number )
+  if ( number > 0 ){
+    return true;
+  }
+  else {
+    return false;
+}
+}
+console.log("Is this positive?", isPositive(-39));
